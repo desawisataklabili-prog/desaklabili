@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beranda - Desa Wisata Kalibli</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <!-- Left side: Logo -->
+      <div class="navbar-brand-container" style="flex: 1">
+        <a class="navbar-brand" href="#"><img src="img/LogoDesaWisata/Logo_Desa_Wisata_Klabili-removebg-preview.png" alt="Logo Desa Wisata Klabili"
+            width="100px" /></a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Language Toggle Switch - Outside collapsible menu -->
+      <div class="navbar-nav d-flex align-items-center">
+        <div class="nav-item d-flex align-items-center language-toggle-container id-active"
+          id="languageToggleContainer">
+          <svg class="flag-img flag-en inactive" width="52" height="36" viewBox="0 0 20 15"
+            xmlns="http://www.w3.org/2000/svg" onclick="setLanguage('en')">
+            <rect width="20" height="15" fill="#012169" />
+            <path d="M0 0L20 15M20 0L0 15" stroke="#fff" stroke-width="2" />
+            <path d="M0 0L20 15M20 0L0 15" stroke="#C8102E" stroke-width="1" />
+            <path d="M10 0V15M0 7.5H20" stroke="#fff" stroke-width="3" />
+            <path d="M10 0V15M0 7.5H20" stroke="#C8102E" stroke-width="2" />
+          </svg>
+          <span class="language-toggle-dot"></span>
+          <svg class="flag-img flag-id active" width="32" height="22" viewBox="0 0 20 15"
+            xmlns="http://www.w3.org/2000/svg" onclick="setLanguage('id')">
+            <rect width="20" height="7.5" fill="#FF0000" />
+            <rect y="7.5" width="20" height="7.5" fill="#FFFFFF" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- Center: Navigation items -->
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 justify-content-center" style="flex: 1">
+          <li class="nav-item">
+            <button class="btn nav-btn active" type="button" data-nav-url="index.html">
+              Beranda
+            </button>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Tentang Kami
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="tentang_kami.html#profil-desa">
+                  Profil Desa
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="tentang_kami.html#struktur-desa">
+                  Struktur Desa
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Fasilitas
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="fasilitas.html#fasilitas-umum-desa">
+                  Fasilitas Umum Desa
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Wisata & Budaya
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#spot-wisata">
+                  Spot Wisata
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#budaya-lokal">
+                  Budaya Lokal
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#acara-tahunan">
+                  Acara Tahunan
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#kerajinan-tangan">
+                  Kerajinan Tangan
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#kuliner-lokal">
+                  Kuliner Lokal
+                </button>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="wisata_budaya.html#souvenir">
+                  Suvenir
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Informasi Desa
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="informasi.html#lokasi-peta">
+                  Lokasi & Peta
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="informasi.html#kontak">
+                  Kontak
+                </button>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <button class="btn nav-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Galeri
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="galeri.html#dokumentasi-acara">
+                  Dokumentasi Acara
+                </button>
+              </li>
+              <li>
+                <button class="dropdown-item" type="button" data-nav-url="galeri.html#kegiatan-masyarakat">
+                  Kegiatan Masyarakat
+                </button>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="container-fluid hero-section d-flex align-items-center justify-content-center" style="height: 100vh">
+    <div class="text-center text-white">
+      <h1 class="display-4 mb-3 fw-bold">Desa Wisata Klabili</h1>
+      <p class="lead mb-4">
+        "Nikmati pesona alam, budaya, dan keramahan masyarakat lokal."
+      </p>
+      <button class="boton-elegante" onclick="scrollToOverview()">
+        Jelajahi<span class="arrow">&rarr;</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Village Overview Section -->
+  <section id="village-overview" class="py-5 bg-light">
+    <div class="container" style="text-align: justify;">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-5 fw-bold text-primary fade-in-on-scroll">
+            Selamat Datang di Desa Klabili
+          </h2>
+          <p class="lead text-muted fade-in-on-scroll">
+            Permata tersembunyi di jantung Indonesia yang menawarkan
+            pengalaman wisata autentik
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm border-0 fade-in-on-scroll">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-primary rounded-circle p-3 me-3">
+                  <i class="fas fa-map-marker-alt text-white"></i>
+                </div>
+                <h4 class="card-title mb-0">Letak & Geografis</h4>
+              </div>
+              <p class="card-text">
+                Selamat datang di Desa Klabili, sebuah permata tersembunyi di Distrik Selemkay, Kabupaten Tambrauw,
+                Papua Barat Daya.
+                Secara geografis, desa ini terletak di bagian utara Pulau Papua dan berbatasan langsung dengan Kabupaten
+                Sorong.
+                Akses menuju Klabili menawarkan petualangan tersendiri! Anda akan menempuh perjalanan darat yang
+                menantang dari Kota Sorong selama 2 jam menggunakan kendaraan 4x4 (contoh: Hilux, Pajero).
+                Jalanan yang masih didominasi tanah dan perbukitan menjanjikan sebuah perjalanan epik menuju keindahan
+                alam yang belum terjamah.
+                Desa Klabili dikelilingi oleh hutan tropis yang lebat, sungai-sungai jernih, dan pegunungan yang
+                menakjubkan.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm border-0 fade-in-on-scroll">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-center mb-3">
+                <div class="bg-success rounded-circle p-3 me-3">
+                  <i class="fas fa-users text-white"></i>
+                </div>
+                <h4 class="card-title mb-0">Masyarakat & Budaya</h4>
+              </div>
+              <p class="card-text">
+                Dengan populasi sekitar 2.500 jiwa, masyarakat Klabili, yang mayoritasnya adalah Suku Moi, dikenal
+                sangat ramah dan menjunjung tinggi tradisi leluhur.
+                Mereka hidup selaras dengan alam, menjaga pengetahuan tradisional dalam bertani, berburu, dan mengolah
+                hasil hutan.
+                Budaya lokal dilestarikan melalui tarian tradisional Suku Moi, sanggar & rumah budaya (SALSES),
+                dan kerajinan tangan yang indah seperti anyaman, noken, dan hiasan manik-manik khas Papua.
+                Suku Moi memiliki struktur sosial berbasis marga yang kuat, dengan tokoh adat dan kepala marga yang
+                memegang peranan penting.
+                Kehidupan di Klabili sangat dipengaruhi oleh kepercayaan animisme, di mana alam dan leluhur dihormati
+                melalui berbagai upacara adat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Village Highlights Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-5 fw-bold">Keunggulan Desa Klabili</h2>
+          <p class="lead text-muted">
+            Temukan pesona unik yang membuat desa kami istimewa
+          </p>
+        </div>
+      </div>
+      <div class="row g-4 justify-content-center" id="village-highlights">
+        <!-- Example Card -->
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Wisata Alam"
+            data-desc="Melangkah ke jantung hutan tropis Klabili, di mana petualangan sesungguhnya menanti.
+            Saksikan keajaiban birdwatching di habitat aslinya, bukan di dalam kandang, melainkan di alam bebas yang menawan.
+            Ditemani pemandu lokal yang berpengetahuan, Anda dapat mengintai spesies langka pada pagi hari saat mereka paling aktif.
+            Jelajahi Air Terjun Klabili yang tersembunyi, taklukkan jalur trekking menantang, nikmati camping di alam terbuka,
+            masuki goa kelelawar untuk mengagumi formasi alam yang spektakuler, dan kunjungi taman anggrek alami yang memukau.
+            Pengalaman alam ini adalah cara kami berbagi kekayaan jasa lingkungan yang menjadi nafas kehidupan di desa ini.">
+            <div class="icon-wrap bg-primary">
+              <i class="fas fa-mountain text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Wisata Alam</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Pertanian Organik"
+            data-desc="Di Klabili, pertanian organik adalah cerminan dari pola hidup yang sudah mendarah daging. 
+            Berbeda dari desa lain, di sini Anda akan menemukan filosofi cukup yang dipegang teguh oleh Suku Moi. 
+            Saksikan langsung bagaimana masyarakat memanen hasil kebun mereka secara subsisten, tanpa merusak, hanya mengambil seperlunya. 
+            Ini adalah kesempatan unik untuk belajar tentang sagu, keladi, dan singkong, yang menjadi sumber pangan utama, serta memahami 
+            hubungan harmonis antara manusia dan alam yang telah terjalin selama ribuan tahun.">
+            <div class="icon-wrap bg-success">
+              <i class="fas fa-seedling text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Pertanian Organik</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Kerajinan Tradisional"
+            data-desc="Bawa pulang lebih dari sekadar suvenir, bawa pulang sebuah cerita. 
+            Noken & manik-manik khas Papua yang diakui UNESCO sebagai warisan budaya dunia, bukan hanya sebuah produk.
+            Dibuat dari serat kulit kayu dan dibawa dengan dahi, noken melambangkan kedewasaan, cinta damai, dan kesuburan bagi perempuan Papua.
+            Setiap jalinan noken dan kilau manik-manik khas Papua memiliki makna mendalam, mencerminkan kearifan lokal dan identitas Suku Moi yang otentik.   ">
+            <div class="icon-wrap bg-warning">
+              <i class="fas fa-palette text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Kerajinan Tradisional</h5>
+          </div>
+        </div>
+        <!-- Tambahkan setelah 3 card yang sudah ada -->
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Kuliner Autentik"
+            data-desc="Rasakan kehangatan Suku Moi melalui cita rasa yang autentik. 
+            Di Klabili, Anda tidak akan menemukan restoran mewah, melainkan Dapur Komunitas yang dikelola langsung oleh para ibu-ibu desa.
+            Nikmati hidangan tradisional seperti papeda, sagu, keladi, singkong, sayur bambu, dan ikan gabus bambu yang dimasak dengan cara
+            turun-temurun yang menciptakan kelezatan tak tertandingi. Ini adalah pengalaman makan yang intim, seakan-akan Anda sedang dijamu di rumah sendiri.">
+            <div class="icon-wrap bg-info">
+              <i class="fas fa-utensils text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Kuliner Autentik</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Seni & Budaya"
+            data-desc="Seni dan budaya adalah jantung yang berdenyut di Desa Klabili.
+            Saksikan pertunjukan tarian tradisional Suku Moi yang memukau, diiringi musik otentik yang menceritakan kisah para leluhur.
+            Puncak dari kunjungan Anda adalah malam budaya dengan musik & makan bersama, sebuah perayaan yang menyatukan seluruh desa
+            dalam suasana yang penuh persaudaraan dan kehangatan.
+            Kunjungan ke Sanggar dan Rumah Budaya (SALSES) akan memberikan wawasan lebih dalam tentang warisan budaya tak ternilai ini.
+">
+            <div class="icon-wrap bg-danger">
+              <i class="fas fa-music text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Seni & Budaya</h5>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="highlight-card" data-title="Penginapan"
+            data-desc="Lupakan hotel dan nikmati pengalaman tinggal yang tak terlupakan. 
+            Di Klabili, penginapan bukan sekadar tempat menginap, melainkan sebuah kesempatan untuk menjadi bagian dari sebuah keluarga lokal. 
+            Meskipun fasilitasnya sederhana, dengan tempat tidur setara hotel namun tanpa AC, kehangatan yang Anda rasakan akan jauh lebih berharga.
+            Bertukar cerita, berbagi tawa, dan rasakan langsung kehidupan sehari-hari Suku Moi, menjalin ikatan yang akan terus Anda kenang.">
+            <div class="icon-wrap bg-secondary">
+              <i class="fas fa-home text-white fa-lg"></i>
+            </div>
+            <h5 class="fw-bold mt-3 mb-0">Penginapan</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Card Overlay -->
+      <div id="highlight-modal" class="highlight-modal">
+        <div class="highlight-modal-content">
+          <button class="highlight-modal-close" aria-label="Tutup">&times;</button>
+          <div class="highlight-modal-icon"></div>
+          <h5 class="highlight-modal-title"></h5>
+          <p class="highlight-modal-desc"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Village Statistics Section -->
+  <section class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="p-3">
+            <h2 class="display-4 fw-bold mb-2">
+              <span class="countup" data-target="15">0</span>+
+            </h2>
+            <p class="lead mb-0">Spot Wisata</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="p-3">
+            <h2 class="display-4 fw-bold mb-2">
+              <span class="countup" data-target="25">0</span>
+            </h2>
+            <p class="lead mb-0">Homestay</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="p-3">
+            <h2 class="display-4 fw-bold mb-2">
+              <span class="countup" data-target="70">0</span>±
+            </h2>
+            <p class="lead mb-0">Wisatawan/Bulan</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="p-3">
+            <h2 class="display-4 fw-bold mb-2">
+              <span class="countup" data-target="10">0</span>
+            </h2>
+            <p class="lead mb-0">Tahun Berkembang</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Village Activities Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-5 fw-bold fade-in-on-scroll">Aktivitas & Pengalaman</h2>
+          <p class="lead text-muted fade-in-on-scroll">
+            Berbagai kegiatan menarik yang dapat Anda nikmati di desa kami
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-left" data-delay="200">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-primary rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-binoculars text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Birdwatching di hutan tropis</h5>
+                  <p class="card-text text-muted">
+                    Nikmati pengalaman seru birdwatching di hutan tropis Klabili yang masih alami. Di sini, wisatawan didampingi pemandu berkelompok untuk mengamati beragam burung Papua liar secara langsung.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-right" data-delay="400">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-success rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-hiking text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Trekking menjelajahi alam</h5>
+                  <p class="card-text text-muted">
+                    Jelajahi jalur trekking di hutan dan bukit sekitar desa Klabili. Setiap langkah menawarkan pemandangan alam Papua Barat Daya yang hijau dan asri.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-left" data-delay="600">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-warning rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-campground text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Kemping di alam terbuka</h5>
+                  <p class="card-text text-muted">
+                    Habiskan malam seru di bawah langit berbintang dengan mendirikan tenda di Klabili. Suasana yang hening serta segarnya udara malam di hutan tropis membuat pengalaman kemping semakin berkesan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-right" data-delay="800">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-info rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-music text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Tarian tradisional Suku Moi</h5>
+                  <p class="card-text text-muted">
+                    Saksikan atraksi budaya berupa tarian tradisional Suku Moi yang memukau. Penari lokal mengenakan kostum adat Papua lengkap dengan musik tradisional khas yang enerjik.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-left" data-delay="1000">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-danger rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-utensils text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Kuliner lokal khas Papua</h5>
+                  <p class="card-text text-muted">
+                    Cicipi aneka hidangan tradisional Klabili, seperti papeda gurih, sagu, keladi, singkong, sayur bambu, dan ikan gabus bambu yang diolah ala Papua. Semua masakan ini dimasak oleh ibu-ibu desa dengan resep turun-temurun.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-right" data-delay="1200">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-secondary rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-water text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Air Terjun Klabili</h5>
+                  <p class="card-text text-muted">
+                    Kunjungi Air Terjun Klabili yang mempesona di tengah hutan. Percikan airnya yang jernih dan pemandangan hijau di sekitarnya memberikan kesejukan tersendiri.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-left" data-delay="1400">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-primary rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-camera text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Spot foto alam</h5>
+                  <p class="card-text text-muted">
+                    Abadikan momen di spot foto Klabili yang indah. Terdapat area panorama perbukitan dan lokasi di dekat Air Terjun Klabili, sangat cocok untuk foto keluarga atau selfie dengan latar alam menawan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-right" data-delay="1600">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-success rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-moon text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Malam budaya lokal</h5>
+                  <p class="card-text text-muted">
+                    Ikuti malam budaya unik Klabili dengan pertunjukan musik tradisional dan makan bersama penduduk. Dalam acara ini pengunjung ikut merasakan kemeriahan musik tradisional Papua dan keakraban bersama sebelum akhir kunjungan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-left" data-delay="1800">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-warning rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-mountain text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Goa Kelelawar & Taman Anggrek</h5>
+                  <p class="card-text text-muted">
+                    Eksplorasi Goa Kelelawar Klabili yang penuh petualangan, lalu kunjungi taman anggrek alam di sekitarnya. Di sini pengunjung dapat melihat koloni kelelawar dan beragam bunga anggrek endemik Papua di habitatnya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6">
+          <div class="card border-0 shadow-sm h-100 slide-in-right" data-delay="2000">
+            <div class="card-body p-4">
+              <div class="d-flex align-items-start">
+                <div class="bg-info rounded-circle p-2 me-3 flex-shrink-0">
+                  <i class="fas fa-home text-white"></i>
+                </div>
+                <div>
+                  <h5 class="card-title">Penginapan & interaksi dengan lokal</h5>
+                  <p class="card-text text-muted">
+                    Tinggal bersama penduduk lokal di tempat penginapan tradisional Klabili dan rasakan suasana hangat kampung Papua. Penginapan berupa rumah penduduk memungkinkan wisatawan belajar langsung budaya Moi dan kehidupan sehari-hari desa.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Village Facilities Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center mb-5">
+          <h2 class="display-5 fw-bold">Fasilitas Desa</h2>
+          <p class="lead text-muted">
+            Fasilitas lengkap untuk kenyamanan wisatawan
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center p-3">
+            <div class="bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+              style="width: 60px; height: 60px">
+              <i class="fas fa-wifi text-white fa-lg"></i>
+            </div>
+            <h6 class="fw-bold">WiFi Gratis</h6>
+            <small class="text-muted">Internet cepat di area publik</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center p-3">
+            <div class="bg-success rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+              style="width: 60px; height: 60px">
+              <i class="fas fa-parking text-white fa-lg"></i>
+            </div>
+            <h6 class="fw-bold">Area Parkir</h6>
+            <small class="text-muted">Parkir aman dan luas</small>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center p-3">
+            <div class="bg-warning rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center"
+              style="width: 60px; height: 60px">
+              <i class="fas fa-restroom text-white fa-lg"></i>
+            </div>
+            <h6 class="fw-bold">Toilet Umum</h6>
+            <small class="text-muted">Fasilitas bersih dan nyaman</small>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+          <a href="fasilitas.html" class="btn btn-lihat-lebih px-5 py-3">
+            <span>Lihat Lebih Banyak</span>
+            <svg class="arrow-anim" width="22" height="22" viewBox="0 0 22 22" fill="none">
+              <path d="M6 11H16M16 11L12.5 7.5M16 11L12.5 14.5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="py-5 cta-section text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-5 fw-bold mb-4">
+            Siap Merasakan Pengalaman Tak Terlupakan?
+          </h2>
+          <p class="lead mb-4" style="color: black;">
+            Bergabunglah dengan ribuan wisatawan yang telah merasakan
+            keajaiban Desa Klabili. Rencanakan kunjungan Anda sekarang!
+          </p>
+          <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+            <a href="https://wa.me/6282236955445?text=Halo%20saya%20mau%20berkunjung" target="_blank" class="btn btn-light btn-lg px-4">
+              <i class="fas fa-calendar-alt me-2"></i>Rencanakan Kunjungan
+            </a>
+            <!-- Bagian Hubungi Kami dihapus -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-5">
+    <div class="container">
+      <div class="row">
+        <!-- Column 1: Logo and Description -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <div class="mb-3">
+            <img src="img/LogoDesaWisata/Logo_Desa_Wisata_Klabili-removebg-preview.png" alt="Logo Desa Wisata Klabili" width="150px" />
+          </div>
+          <p class="text-white-50">
+            Desa Wisata Klabili menawarkan pengalaman wisata autentik dengan keindahan alam, budaya lokal, dan keramahan masyarakat Suku Moi.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Tautan Cepat</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-white-50 text-decoration-none">Beranda</a></li>
+            <li class="mb-2"><a href="tentang_kami.html" class="text-white-50 text-decoration-none">Tentang Kami</a></li>
+            <li class="mb-2"><a href="fasilitas.html" class="text-white-50 text-decoration-none">Fasilitas</a></li>
+            <li class="mb-2"><a href="wisata_budaya.html" class="text-white-50 text-decoration-none">Wisata & Budaya</a></li>
+            <li class="mb-2"><a href="galeri.html" class="text-white-50 text-decoration-none">Galeri</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Contact Info -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Kontak Kami</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-phone me-2"></i>
+              <span>+62 822-3695-5445</span>
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              <span>Kampung Klabili, Distrik Selemkai, Kabupaten Tambrauw</span>
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-envelope me-2"></i>
+              <span>info@desaklabili.com</span>
+             </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Social Media -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5 class="fw-bold mb-3">Ikuti Kami</h5>
+          <div class="social-media-links d-flex flex-wrap gap-3">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/klabili_birdwatching/" target="_blank" rel="noopener noreferrer"
+              class="social-link instagram-link" title="Ikuti kami di Instagram">
+              <div class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+              </div>
+              <span class="social-label">Instagram</span>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/profile.php?id=100094418988540" target="_blank" rel="noopener noreferrer"
+              class="social-link facebook-link" title="Ikuti kami di Facebook">
+              <div class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                </svg>
+              </div>
+              <span class="social-label">Facebook</span>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6282236955445?text=Halo%20saya%20mau%20tanya%20tentang%20Desa%20Wisata%20Klabili" target="_blank"
+              rel="noopener noreferrer" class="social-link whatsapp-link" title="Hubungi kami di WhatsApp">
+              <div class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.893 3.488"/>
+                </svg>
+              </div>
+              <span class="social-label">WhatsApp</span>
+            </a>
+
+            <!-- YouTube (Optional - you can add if you have a channel) -->
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              class="social-link youtube-link" title="Subscribe channel YouTube kami" style="display: none;">
+              <div class="social-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </div>
+              <span class="social-label">YouTube</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <hr class="my-4">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0 text-white-50">
+            &copy; 2025 Desa Wisata Klabili. Semua hak dilindungi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- Bootstrap JS -->
+  <script src="js/bootstrap/bootstrap.bundle.js"></script>
+  <!-- Custom JS -->
+  <script src="js/custom.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("languageToggleContainer");
+      const flagEn = container.querySelector(".flag-en");
+      const flagId = container.querySelector(".flag-id");
+
+      flagEn.addEventListener("click", function () {
+        flagEn.classList.add("active");
+        flagEn.classList.remove("inactive");
+        flagId.classList.add("inactive");
+        flagId.classList.remove("active");
+        container.classList.add("en-active");
+        container.classList.remove("id-active");
+      });
+
+      flagId.addEventListener("click", function () {
+        flagId.classList.add("active");
+        flagId.classList.remove("inactive");
+        flagEn.classList.add("inactive");
+        flagEn.classList.remove("active");
+        container.classList.add("id-active");
+        container.classList.remove("en-active");
+      });
+    });
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Card click handler
+      document.querySelectorAll('.highlight-card').forEach(card => {
+        card.addEventListener('click', function () {
+          const modal = document.getElementById('highlight-modal');
+          const icon = card.querySelector('.icon-wrap').cloneNode(true);
+          const title = card.getAttribute('data-title');
+          const desc = card.getAttribute('data-desc');
+          // Set modal content
+          const modalIcon = modal.querySelector('.highlight-modal-icon');
+          modalIcon.innerHTML = '';
+          modalIcon.appendChild(icon);
+          modal.querySelector('.highlight-modal-title').textContent = title;
+          const descEl = modal.querySelector('.highlight-modal-desc');
+          descEl.textContent = '';
+          modal.classList.add('active');
+          // Typing animation
+          let i = 0;
+          function typeWriter() {
+            if (i <= desc.length) {
+              descEl.textContent = desc.slice(0, i);
+              i++;
+              setTimeout(typeWriter, 18 + Math.random() * 22);
+            }
+          }
+          typeWriter();
+        });
+      });
+      // Close modal
+      document.querySelector('.highlight-modal-close').onclick = function () {
+        document.getElementById('highlight-modal').classList.remove('active');
+      };
+      // Close modal on overlay click
+      document.getElementById('highlight-modal').onclick = function (e) {
+        if (e.target === this) this.classList.remove('active');
+      };
+      // ESC key closes modal
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape") document.getElementById('highlight-modal').classList.remove('active');
+      });
+    });
+  </script>
+
+  <script>
+    // Robust smooth scroll function for the "Jelajahi" button
+    function scrollToOverview() {
+      const targetElement = document.getElementById("village-overview");
+
+      if (!targetElement) {
+        console.error("Target element not found");
+        return;
+      }
+
+      // Always use JavaScript animation for consistent behavior
+      const targetPosition = targetElement.offsetTop - 80; // Account for navbar
+      const startPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+      const distance = targetPosition - startPosition;
+      const duration = 1000; // 1 second duration
+      let start = null;
+
+      function animation(currentTime) {
+        if (start === null) start = currentTime;
+        const timeElapsed = currentTime - start;
+        const progress = Math.min(timeElapsed / duration, 1);
+
+        // Easing function (ease-in-out)
+        const easeInOutQuad =
+          progress < 0.5
+            ? 2 * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+
+        const currentPosition = startPosition + distance * easeInOutQuad;
+        window.scrollTo(0, currentPosition);
+
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      }
+
+      requestAnimationFrame(animation);
+    }
+  </script>
+
+  <script>
+    // Animations on scroll for multiple classes (repeatable)
+    document.addEventListener("DOMContentLoaded", function () {
+      const animEls = document.querySelectorAll('.fade-in-on-scroll, .slide-in-left, .slide-in-right');
+      const observer = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              const delay = entry.target.getAttribute('data-delay') || 0;
+              setTimeout(() => {
+                entry.target.classList.add('visible');
+              }, delay);
+            } else {
+              entry.target.classList.remove('visible');
+            }
+          });
+        },
+        { threshold: 0.3 }
+      );
+      animEls.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      function animateCountUp(el, target, duration = 1000) { // <-- 8 detik
+        let start = 0;
+        let startTime = null;
+        function updateCount(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          el.textContent = Math.floor(progress * (target - start) + start);
+          if (progress < 1) {
+            requestAnimationFrame(updateCount);
+          } else {
+            el.textContent = target;
+          }
+        }
+        requestAnimationFrame(updateCount);
+      }
+
+      document.querySelectorAll('.countup').forEach(el => {
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        animateCountUp(el, target, 1000); // <-- 8 detik
+      });
+    });
+  </script>
+
+
+
+</body>
+
+</html>
