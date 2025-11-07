@@ -1,5 +1,3 @@
-# klabili village web dev basement
+# LINK WEBSITE DESA WISATA KLABILI
 
-https://mergma.github.io/Klabili-dev/
-
-birb
+https://desawisataklabili-prog.github.io/desaklabili/
